@@ -8,16 +8,17 @@
     <style>
         html,body{
             margin:0;
-            height:100%;
+            min-height:100%;
             background:#ffffff;
             color:#222;
-            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
         }
 
         body{
             display:flex;
             justify-content:center;
             align-items:center;
+            min-height:100vh;
         }
 
         .box{
@@ -45,10 +46,60 @@
             line-height:1.8;
         }
 
+        .listen{
+            margin-top:35px;
+            color:#777;
+            font-style:italic;
+        }
+
+        .music-links{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:14px;
+            margin-top:22px;
+        }
+
+        .music-links a{
+            display:flex;
+            align-items:center;
+            width:190px;
+            text-decoration:none;
+            color:#444;
+            font-size:16px;
+            transition:opacity .2s ease;
+        }
+
+        .music-links a:hover{
+            opacity:.65;
+        }
+
+        .music-links img{
+            width:28px;
+            height:28px;
+            object-fit:contain;
+            margin-right:14px;
+            border-radius:6px;
+        }
+
         footer{
-            margin-top:60px;
+            margin-top:55px;
             font-size:14px;
             color:#aaa;
+        }
+
+        @media (max-width:600px){
+            h1{
+                font-size:36px;
+            }
+
+            h2{
+                font-size:19px;
+            }
+
+            .box{
+                padding:28px;
+            }
         }
     </style>
 </head>
@@ -57,17 +108,43 @@
 
 <div class="box">
 
-<h1>Prof. Dr. Serdar Öztora</h1>
+    <h1>Prof. Dr. Serdar Öztora</h1>
 
-<h2>Personal Website</h2>
+    <h2>Personal Website</h2>
 
-<p>
-This website is currently under construction.
-</p>
+    <p>
+        This website is currently under construction.
+    </p>
 
-<footer>
-© 2026 Serdar Öztora
-</footer>
+    <p class="listen">
+        While you're waiting, you may want to listen to something...
+    </p>
+
+    <div class="music-links">
+
+        <a href="https://open.spotify.com/intl-tr/artist/7cPwjANq9NTr10zFhi7zRC?si=-bv-S6SnSk-4aEXX1LAa7w"
+           target="_blank" rel="noopener">
+            <img src="spotify.png" alt="Spotify">
+            <span>Spotify</span>
+        </a>
+
+        <a href="https://music.apple.com/tr/artist/serdar-%C3%B6ztora/1515869091?l=tr"
+           target="_blank" rel="noopener">
+            <img src="apple-music.png" alt="Apple Music">
+            <span>Apple Music</span>
+        </a>
+
+        <a href="https://music.youtube.com/@serdaroztora9698?si=br8vqf82xTxzJB06"
+           target="_blank" rel="noopener">
+            <img src="youtube-music.webp" alt="YouTube Music">
+            <span>YouTube Music</span>
+        </a>
+
+    </div>
+
+    <footer>
+        © 2026 Serdar Öztora
+    </footer>
 
 </div>
 
